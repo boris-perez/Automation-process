@@ -37,10 +37,31 @@ public class Machine extends BasePage {
     @FindBy(id = "submit")
     private WebElement submit;
 
+    @FindBy(id = "deleteMachine")
+    private WebElement deleteIcon;
+
+    @FindBy(id = "editMachine")
+    private WebElement editIcon;
+
+    @FindBy(id = "ok")
+    private WebElement ok;
+
     public void machineSection() {
         CommonEvents.clickButton(machineSection);
         CommonEvents.clickButton(newMachine);
-        }
+    }
+
+    public void deleteMachine() {
+        CommonEvents.clickButton(deleteIcon);
+        CommonEvents.clickButton(ok);
+    }
+
+    public void editMachine() {
+        CommonEvents.clickButton(editIcon);
+        String name1 = PropertyAccessor.getInstance().getName1();
+        CommonEvents.setInputField(names, name1);
+        CommonEvents.clickButton(submit);
+    }
 
     public void registerMachine(){
         String name = PropertyAccessor.getInstance().getName();

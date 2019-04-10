@@ -9,6 +9,7 @@ public class PropertyAccessor {
     private static final String BROWSER = "browser";
     private static final String BASE_URL = "baseurl";
     private static final String NAME = "name";
+    private static final String NAME1 = "name1";
     private static final String MARK = "mark";
     private static final String MODEL = "model";
     private static final String PRICE = "price";
@@ -60,6 +61,9 @@ public class PropertyAccessor {
     }
 
     public String getName() {return getDataProperty(NAME);
+    }
+
+    public String getName1() {return getDataProperty(NAME1);
     }
 
     public String getModel() {

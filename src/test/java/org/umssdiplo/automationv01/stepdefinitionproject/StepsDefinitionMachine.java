@@ -23,4 +23,13 @@ public class StepsDefinitionMachine {
         machine.machineSection();
     }
 
+    @And("^Delete a machine$")
+    public void deleteAMachine() throws Throwable{
+        machine.deleteMachine();
+    }
+
+    @And("^Edit a machine$")
+    public void editAMachine() {
+        machine.editMachine();
+    }
 }
